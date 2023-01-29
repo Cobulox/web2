@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html{
+	scroll-padding-top: 150px;
+}
+
+@font-face {
+    font-family: jojo1;
+    src: url(fonts/JosefinSlab-Bold.ttf);
+}
+
+main{
+    background-image: url(images/patern2.png);
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+	background-size: contain;
+}
+
+/* header */
+#header-wrapper{
+    background-image: url(images/patern1.jpg);
+    border-bottom: 2px solid #e41aff;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+
+}
+
+header{
+	padding: 15px 0;
+	margin: 0 5%;
+	overflow: auto;
+}
+
+#logo{
+	width: 12rem;
+	float: left;
+}
+
+nav{
+	display: block;
+	float: right;
+	transition: 0.3s;
+	padding-top: 30px;
+}
+
+nav a{
+	text-decoration: none;
+	font-size: 25px;
+	font-family: jojo1;
+	text-transform: uppercase;
+	color: #fff;
+	margin-left: 30px;
+}
+
+nav a:hover {
+	color: #e41aff;
+	transition: 0.3s;
+}
+
+/* baner */
+@keyframes slidy {
+	0% {left: 0%;}
+	20% {left: 0%;}
+	25% {left: -100%;}
+	45% {left: -100%;}
+	50% {left: -200%;}
+	70% {left: -200%;}
+	75% {left: -300%;}
+	95% {left: -300%;}
+	100% {left: -400%;}
+}
+
+div#slider {
+	overflow: hidden;
+	position: relative;
+	border-bottom: 2px solid #e41aff;
+}
+
+div#slider figure img {
+	width: 20%;
+	min-height: 400px;
+	max-height: 700px;
+	object-fit: cover;
+	float: left;
+}
+
+div#slider figure {
+	width: 500%;
+	animation: 30s slidy infinite;
+	position: relative;
+}
+
+#slider p {
+	font-family: jojo1;
+	font-size: 110px;
+	color: black;
+	-webkit-text-fill-color: #e41aff;
+	-webkit-text-stroke: 5px;
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+	z-index: 998;
+}
+
+/* koleone */
+#kolone {
+	background-image: url(images/patern1.jpg);
+	text-align: center;
+	padding: 10px;
+    border: 1px solid #e41aff;
+    margin: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.kolona {
+	padding: 20px;
+	line-height: 1.6em;
+}
+
+.kolona h3{
+	font-size: 50px;
+	color: #e41aff;
+	font-family: jojo1;
+	padding-bottom: 20px;
+}
+
+.kolona p, a{
+	font-size: 20px;
+	margin-bottom: 20px;
+	color: #fff;
+}
+
+.kolona a{
+	background-color: #e41aff;
+	color: white;
+	text-decoration: none;
+	border-radius: 20px;
+	margin-top: 10px;
+	padding: 0 10px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.kolona a:hover{
+	background-color:white;
+	color: #e41aff;
+}
+
+.kolona img{
+    float: left;
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
+    border: 1px solid #e41aff;
+	object-position: 50% 7%;
+}
+
+#mangabox h2{
+	font-size: 70px;
+	color: #fff;
+	font-family: jojo1;
+	text-transform: uppercase;
+	padding-bottom: 20px;
+	text-align: center
+}
+
+#mangabox p{
+	font-size: 20px;
+	color: #fff;
+	padding-bottom: 20px;
+	position: relative;
+	left: 5%;
+}
+
+/* flexbox */
+div #flexbox {
+	padding-bottom: 50px;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.mange {
+	background-image: url(images/patern1.jpg);
+	padding: 10px;
+    border: 1px solid #e41aff;
+    margin: 50px;
+	color: #fff;
+}
+
+.mange h3{
+	color:#e41aff;
+	font-family: jojo1;
+	font-size: 20px;
+	padding-top: 10px;
+	margin: 0 10px;
+}
+
+.mange p{
+	padding: 10px 0;
+	margin: 0 10px;
+	font-size: 12px;
+}
+
+.mange a{
+	background-color: #e41aff;
+	color: white;
+	text-decoration: none;
+	border-radius: 20px;
+	margin-top: 10px;
+	padding: 0 10px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.mange a:hover{
+	background-color:white;
+	color: #e41aff;
+}
+
+.flexbox-item {
+	padding: 15px;
+	width: 300px;
+}
+
+.flexbox-item img{
+	width: 75%;
+	height: 65%;
+	border: 1px solid #e41aff;
+	margin-top: 5px;
+}
+
+footer {
+	background-image: url(images/patern1.jpg);
+	color: white;
+	text-align: center;
+    font-family: jojo1;
+	padding: 20px;
+    border-top: 2px solid #e41aff;
+}
+
+#kolone::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+[class *="col-"] {
+	float: left;
+}
+
+.col-l-6 { width: 50%;}
+.col-l-4 { width: 33.33%;}
+.col-l-8 { width: 66.66%;}
